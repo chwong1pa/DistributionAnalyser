@@ -514,7 +514,7 @@ def page_fit():
         Arguments can be multiple (a, b, c...). This function is from:
         https://stackoverflow.com/questions/2158395/flatten-an-irregular-list-of-lists
         """
-        if isinstance(nested_l, collections.Iterable):
+        if isinstance(nested_l, collections.abc.Iterable):
             return [a for i in nested_l for a in flatten(i)]
         else:
             return [nested_l]
